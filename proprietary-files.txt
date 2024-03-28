@@ -404,7 +404,7 @@ vendor/lib/libadreno_utils.so
 vendor/lib/libadreno_app_profiles.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/eglSubDriverAndroid.so
