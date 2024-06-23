@@ -24,6 +24,9 @@
 # Inherit properties
 $(call inherit-product, $(LOCAL_PATH)/properties.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
