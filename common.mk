@@ -182,7 +182,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     gralloc.qcom \
     hwcomposer.qcom \
-    memtrack.trinket \
     libdisplayconfig \
     libdisplayconfig.qti \
     libdisplayconfig.vendor \
@@ -198,9 +197,8 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.composer@2.4-service \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
     android.frameworks.displayservice@1.0 \
+    vendor.qti.hardware.memtrack-service \
     vendor.qti.hardware.display.allocator-service \
     vendor.display.config@2.0
 
