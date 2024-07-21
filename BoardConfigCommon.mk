@@ -22,8 +22,6 @@
 # definition file).
 #
 
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 COMMON_PATH := device/xiaomi/sm6125-common
 
 # Bootloader
