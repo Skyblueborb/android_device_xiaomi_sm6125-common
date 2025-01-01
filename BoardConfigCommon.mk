@@ -85,11 +85,6 @@ TARGET_USE_QTI_BT_STACK := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
-# Display
-TARGET_USES_HWC2 := true
-TARGET_USES_GRALLOC1 := true
-TARGET_USES_ION := true
-
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
@@ -113,6 +108,9 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/manifests/compatibility_matrix.xml
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_trinket
 TARGET_RECOVERY_DEVICE_MODULES := libinit_trinket
+
+# Media
+TARGET_USES_ION := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
