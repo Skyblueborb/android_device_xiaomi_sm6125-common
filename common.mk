@@ -180,8 +180,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Display
 PRODUCT_PACKAGES += \
-    gralloc.trinket \
-    hwcomposer.trinket \
+    gralloc.qcom \
+    hwcomposer.qcom \
     memtrack.trinket \
     libdisplayconfig \
     libdisplayconfig.qti \
