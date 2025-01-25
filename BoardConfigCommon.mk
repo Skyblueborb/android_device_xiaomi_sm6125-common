@@ -107,6 +107,7 @@ LOC_HIDL_VERSION := 4.0
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/manifests/manifest.xml
+DEVICE_MANIFEST_FILE += hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/manifests/compatibility_matrix.xml
 
 # Init
