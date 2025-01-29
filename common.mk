@@ -223,10 +223,6 @@ PRODUCT_PACKAGES += \
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# Doze
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
