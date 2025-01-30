@@ -22,6 +22,7 @@ from extract_utils.main import (
 namespace_imports = [
     "device/xiaomi/sm6125-common",
     "hardware/qcom-caf/sm8150",
+    "hardware/qcom/sm8150/gps",
     "hardware/qcom-caf/wlan",
     "hardware/xiaomi",
     "vendor/qcom/opensource/commonsys/display",
@@ -35,6 +36,14 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     libs_clang_rt_ubsan: lib_fixup_remove_arch_suffix,
     libs_proto_3_9_1: lib_fixup_vendorcompat,
+    (
+        'com.qualcomm.qti.dpm.api@1.0',
+        'vendor.qti.hardware.fm@1.0',
+        'vendor.qti.imsrtpservice@3.0',
+    ): lib_fixup_vendor_suffix,
+    (
+        'libwpa_client',
+    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
