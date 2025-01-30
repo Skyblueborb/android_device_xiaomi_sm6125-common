@@ -1,0 +1,7 @@
+cc_library_static {
+    name: "libpower_6125",
+    vendor_available: true,
+    srcs: ["power-6125.c"],
+    include_dirs: ["vendor/qcom/opensource/power"],
+    shared_libs: ["liblog"],
+}
