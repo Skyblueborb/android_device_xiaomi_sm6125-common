@@ -747,7 +747,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/bin/cnss-daemon
 
 # WiFi Display
-framework/WfdCommon.jar
+system/framework/WfdCommon.jar
 system_ext/priv-app/WfdService/WfdService.apk
 system_ext/bin/sigma_miracasthalservice
 system_ext/bin/wfdservice
