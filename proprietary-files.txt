@@ -370,6 +370,7 @@ vendor/lib/libgsl.so
 vendor/lib/libgpudataproducer.so
 vendor/lib/libc2d30_bltlib.so
 vendor/lib/libOpenCL.so
+vendor/lib/libCB.so
 vendor/lib/libC2D2.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libadreno_app_profiles.so
@@ -688,6 +689,9 @@ vendor/lib/libssc.so
 vendor/lib/libsnsapi.so
 vendor/lib64/libsensorslog.so
 vendor/lib/libsensorslog.so
+vendor/lib/libsns_device_mode_stub.so
+vendor/lib/libsns_fastRPC_util.so
+vendor/lib/libsns_low_lat_stream_stub.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
