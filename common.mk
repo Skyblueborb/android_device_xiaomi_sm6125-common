@@ -87,9 +87,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.service \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.effect@2.0-service \
     android.hardware.soundtrigger@2.2-impl \
-    audio.a2dp.default \
     audio.primary.trinket \
     audio.r_submix.default \
     audio.usb.default \
@@ -97,8 +95,7 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener \
-    libssr
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
@@ -158,12 +155,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Connectivity Engine support (CNE)
-PRODUCT_PACKAGES += \
-    cneapiclient \
-    com.quicinc.cne \
-    services-ext
-
 # Consumerir
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -179,11 +170,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     gralloc.qcom \
     hwcomposer.qcom \
-    libdisplayconfig \
     libdisplayconfig.qti \
-    libdisplayconfig.vendor \
     libtinyxml \
-    libtinyxml.vendor \
     libvulkan \
     libqdMetaData \
     libqdMetaData.system
@@ -215,7 +203,7 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
-    android.hardware.drm@1.4-service.clearkey
+    android.hardware.drm-service.clearkey
 
 PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl
@@ -238,12 +226,6 @@ PRODUCT_PACKAGES += \
 
 # GPS / Location
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss@2.1-impl-qti \
-    android.hardware.gnss@2.1-service-qti \
-    libbatching \
-    libgeofencing \
-    libgnss \
     libsensorndkbridge \
     libwifi-hal-ctrl
 
@@ -338,16 +320,20 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.xiaomi-libperfmgr \
+    android.hardware.power-service.lineage-libperfmgr \
     android.hardware.power@1.2.vendor \
     libqti-perfd-client
 
-PRODUCT_SOONG_NAMESPACES += \
-    hardware/google/interfaces \
-    hardware/google/pixel
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/xiaomi
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -365,7 +351,6 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
-    libjson.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -409,15 +394,6 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti \
-    thermal.trinket
-
-# Trust
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
@@ -431,9 +407,8 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     hostapd \
-    libqsap_sdk \
     libwifi-hal-qcom \
     libwpa_client \
     wcnss_service \
@@ -452,7 +427,6 @@ PRODUCT_COPY_FILES += \
 
 # WiFi Display
 PRODUCT_PACKAGES += \
-    libaacwrapper \
     libnl \
     libwfdaac_vendor
 
