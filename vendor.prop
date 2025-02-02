@@ -117,14 +117,8 @@ bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.ccp.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 
-# Camera
-persist.vendor.camera.expose.aux=1
-persist.vendor.camera.perflock.enable=0
-vendor.camera.not.cts.apk=1
-vendor.camera.not.ctsverify.apk=1
-
 # Chipset
-ro.soc.manufacturer=QTI
+ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM6125
 
 # Crypto
@@ -157,11 +151,6 @@ persist.vendor.dpmhalservice.enable=1
 
 # DRM
 drm.service.enabled=true
-
-# Fingerprint
-persist.vendor.fingerprint.type=udfps_optical
-persist.vendor.fingerprint.sensor_location=360|1423|67
-persist.vendor.fingerprint.sensor_modules=goodix_fod
 
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1

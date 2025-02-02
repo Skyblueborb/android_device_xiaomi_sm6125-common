@@ -45,24 +45,16 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/lib-imsvideocodec.so': blob_fixup()
         .add_needed('libgui_shim.so'),
-    'vendor/lib/miwatermark.so': blob_fixup()
-        .add_needed('libpiex_shim.so'),
-    ('vendor/bin/sensors.qti', 'vendor/lib64/libsensorcal.so'): blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
-    ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib/mediadrm/libwvdrmengine.so'): blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so')
+    ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
-    'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
-        .remove_needed('libhidlbase.so')
-        .replace_needed('libhidltransport.so', 'libhidlbase-v32.so'),
     'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
         .add_line_if_missing('gettid: 1'),
-    'vendor/lib/hw/audio.primary.laurel_sprout.so': blob_fixup()
-        .binary_regex_replace(b"vendor/lib/liba2dpoffload.so", b"liba2dpoffload_laurel_sprout.so")
+    'vendor/lib/hw/audio.primary.sm6125.so': blob_fixup()
+        .binary_regex_replace(b"vendor/lib/liba2dpoffload.so", b"vendor/lib/liba2dpoffload_sm6125.so")
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'laurel_sprout',
+    'sm6125-common',
     'xiaomi',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

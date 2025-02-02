@@ -44,22 +44,8 @@ sh_binary {
 
 // Init configuration files
 prebuilt_etc {
-    name: "init.laurel_sprout.rc",
-    src: "etc/init.laurel_sprout.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.qcom.rc",
     src: "etc/init.qcom.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.fingerprint.rc",
-    src: "etc/init.fingerprint.rc",
     sub_dir: "init/hw",
     vendor: true,
 }
@@ -86,15 +72,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "ueventd.qcom.rc",
-    filename: "ueventd.rc",
-    src: "etc/ueventd.rc",
+    name: "init.recovery.qcom.rc",
+    src: "etc/init.recovery.qcom.rc",
+    sub_dir: "init/hw",
     vendor: true,
 }
 
-// fstab
 prebuilt_etc {
-    name: "fstab.qcom",
-    src: "etc/fstab.qcom",
+    name: "ueventd.qcom.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.rc",
     vendor: true,
 }
